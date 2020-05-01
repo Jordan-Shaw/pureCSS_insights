@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Work+Sans&display=swap');
+
+html,
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.pageContainer {
+  width: 98vw;
+  height: 98vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 1vh 1vw;
+}
+
+.contentContainer {
+  position: relative;
+  background-color: #dddfd4;
+  overflow: hidden;
+  transition: box-shadow 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  border-radius: 10px;
+
+}
+
+.contentContainer:nth-of-type(4n + 1) {
+  background-color: #fae596;
+}
+
+.contentContainer:nth-of-type(4n + 2) {
+  background-color: #3fb0ac;
+}
+
+.contentContainer:nth-of-type(4n + 3) {
+  background-color: #173e4c;
+}
+
+.contentContainer:nth-of-type(4n + 4) {
+  background-color: #3fb0ac;
+}
+
+.contentContainer:hover {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  transform: scale(1.05, 1.05);
+  grid-column: 2fr;
+}
+
+h4,
+a {
+  z-index: 1;
+}
+
+h4 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  font-family: 'Eczar';
+}
+
+
+a {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  font-family: 'Work Sans';
+}
+
+img {
+  position: absolute;
+  opacity: 0%;
+  left: 0px;
+  top: 0px;
+  width: 120%;
+  object-position: 50% 50%;
+  z-index: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.contentContainer:hover img {
+  opacity: 50%;
+}
