@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oswald:wght@600&display=swap");
 
 html,
 body {
@@ -9,6 +9,13 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pageContainer {
@@ -31,7 +38,7 @@ body {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-      background-image: linear-gradient(to bottom right, #3fb0ac, #fae596);
+  background-image: linear-gradient(to bottom right, #3fb0ac, #fae596);
   color: black;
 }
 
@@ -58,12 +65,13 @@ body {
 }
 
 .contentContainer:hover h4 {
-  font-size: 100%;
+  font-size: 110%;
 }
 
 .contentContainer:hover p {
   opacity: 100%;
   bottom: 40px;
+  font-size: 110%;
 }
 
 h4,
@@ -76,9 +84,8 @@ h4 {
   position: absolute;
   top: 10px;
   text-align: center;
-  font-family: "Eczar";
-  /* color: white; */
-  font-size: 145%;
+  font-family: "Oswald";
+  font-size: 150%;
   transition: font-size 0.7s ease-in-out;
   margin: 0;
 }
@@ -87,9 +94,10 @@ p {
   position: absolute;
   bottom: 10px;
   text-align: center;
-  font-family: "Work Sans";
+  font-family: "EB Garamond";
+  font-size: 75%;
   opacity: 0%;
-  transition: opacity 1.4s ease-in-out;
+  transition: font-size 0.7s ease-in-out;
   transition: bottom 0.7s ease-in-out;
 }
 
@@ -127,4 +135,41 @@ img {
 
 .contentContainer:hover form {
   opacity: 1;
+}
+
+@media only screen and (max-width: 1250px) {
+  h4 {
+    font-size: 115%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    height: 205vh;
+  }
+
+  h4 {
+    font-size: 150%;
+  }
+  .pageContainer {
+    height: 200vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 305vh;
+  }
+  .pageContainer {
+    height: 300vh;
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  h4 {
+    font-size: 175%;
+  }
 }
