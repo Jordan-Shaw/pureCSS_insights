@@ -17,17 +17,14 @@ $json = json_decode($jsondata,true);
 <body>
 <div class="pageContainer">
     <?php for ($x = 2; $x <= 10; $x++) { ?>
-    <div class="contentContainer">
+    <div class="contentContainer" id=<?php echo 'post'. $x?>>
         <div class=flex>
             <h4><?php echo str_replace(" - MCV/Develop","",$json[$x]['attachments'][0]['title']); ?></h4>
             <img src="<?php echo ($json[$x]['attachments'][0]['image_url']) ;?>">
             <!-- <br> -->
-            <form action="<?php echo ($json[$x]['attachments'][0]['title_link']); ?>">
-                <input type="submit" value="Visit site" class="button">
-            </form>
-            <p>
+            <a href="<?php echo ($json[$x]['attachments'][0]['title_link']); ?>">
                 <?php echo str_replace("1","",$json[$x]['attachments'][0]['text']); ?>...
-            </p>
+    </a>
         </div>
     </div>
     <?php } ?>
